@@ -97,7 +97,7 @@
                     <!-- Messaggi della chat attiva -->
                     <div class="activeChat d-flex flex-column">
                         <!-- Per ogni messaggio nell'array messages crea l'elemento testo -->
-                        <p v-for="message in contacts[activeContact].messages" class="message" :class="message.status ? 'sentMessage' : 'replyMessage'">{{message.message}}</p>
+                        <p v-for="message in contacts[activeContact].messages" class="message" :class="message.status === 'sent' ? 'sentMessage' : 'replyMessage'">{{message.message}}</p>
 
                     </div>
                     <!-- Input per nuovo messaggio -->
