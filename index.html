@@ -55,13 +55,13 @@
                       </div>
 
                     <!-- Lista contatti -->
-                    <div class="contactList">
-                        <div class="userContact d-flex align-items-center">
+                    <div class="contactList bg-white">
+                        <div v-for="(contact,i) in contacts" class="userContact d-flex align-items-center" @click="setActive(i)">
                             <div class="contactAvatar">
-                                <img class="mx-2" src="./img/avatar_1.jpg" alt="">
+                                <img class="mx-2" :src="contact.avatar" alt="">
                             </div>
                             <div class="contactInfo d-flex flex-column">
-                                <span>Andrea</span>
+                                <span>{{contact.name}}</span>
                                 <span class="lastSeenOnline">Ultimo messaggio inviato</span>
                             </div>
                         </div>
@@ -77,10 +77,10 @@
                 <div class="col-12 d-flex align-items-center justify-content-between">
                     <div class="loggedUser d-flex align-items-center justify-content-center">
                         <!-- Avatar utente attivo -->
-                        <img class="mx-2" src="./img/avatar_1.jpg" alt="avatar_1">
+                        <img class="mx-2" :src="contacts[activeContact].avatar" alt="avatar_1">
                         <!-- Nome utente chat attiva e ultimo accesso-->
                         <div class="activeUserInfo d-flex flex-column">
-                            <span>Andrea</span>
+                            <span>{{contacts[activeContact].name}}</span>
                             <span class="lastSeenOnline">Ultimo accesso oggi alle 12:00</span>
                         </div>
                     </div>
@@ -95,9 +95,7 @@
                 <div class="col-12 lightgrey">
                     <!-- Messaggi della chat attiva -->
                     <div class="activeChat d-flex flex-column">
-                        <p class="message sentMessage">Questo è un nuovo messaggio</p>
-                        <p class="message sentMessage">Questo è un nuovo messaggio</p>
-                        <p class="message replyMessage">Questo è una risposta</p>
+                        <p v-for="message in contacts[activeContact].messages" class="message" :class="message.status ? 'sentMessage' : 'replyMessage'">{{message.message}}</p>
 
                     </div>
                     <!-- Input per nuovo messaggio -->
