@@ -17,6 +17,14 @@ img{
     margin: 0.5em 0;
 }
 
+.notificationImage{
+    color: #8EDAFB;;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin: 0.5em 0;
+    background-color: white;
+}
 
 .lastSeenOnline{
     font-size: 0.8em;
@@ -25,6 +33,10 @@ img{
 .activeChat{
     min-height: 500px;
     background-image: url(../img/mine.jpg);
+}
+
+.contactList{
+    height: 100%;
 }
 
 .typeMessage input{
@@ -55,3 +67,4 @@ img{
 
 /* Colors */
 .lightgrey{background-color: #EAEAEA;}
+.lightblue{background-color: #8EDAFB;}

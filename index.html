@@ -15,12 +15,12 @@
 </head>
 <body>
     <div id="app" class="container mt-4">
-       <div class="row">
+       <div class="row lightgrey">
            <!-- Lato APP Sinistro -->
         <div class="col-4">
             <div class="row">
                 <!-- Sezione Utente Loggato -->
-                <div id="loggedUser" class="col-12 lightgrey d-flex align-items-center justify-content-between">
+                <div id="loggedUser" class="col-12 d-flex align-items-center justify-content-between">
                     <div class="loggedUser d-flex align-items-center justify-content-center">
                         <!-- Avatar utente loggato -->
                         <img class="mx-2" src="./img/avatar_1.jpg" alt="avatar_1">
@@ -34,15 +34,47 @@
                         <i class="fas fa-ellipsis-vertical fa-lg mx-2"></i>
                     </div>
                 </div>
-                <!-- Lista contatti -->
-                <div class="col-12">Prova</div>
+                <!-- Banner Notifiche -->
+                <div class="col-12 lightblue">
+                    <div class="d-flex align-items-center">
+                        <div class="notificationImage d-flex align-items-center justify-content-center mx-2">
+                            <i class="fas fa-bell-slash fa-lg"></i>
+                        </div>
+                        <div class="notificationText d-flex flex-column">
+                            <span>Ricevi notifiche di nuovi messaggi</span>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sezione chat -->
+                <div class="col-12">
+                    <!-- Barra di ricerca della chat -->
+                    <div class="findChat input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>
+
+                    <!-- Lista contatti -->
+                    <div class="contactList">
+                        <div class="userContact d-flex align-items-center">
+                            <div class="contactAvatar">
+                                <img class="mx-2" src="./img/avatar_1.jpg" alt="">
+                            </div>
+                            <div class="contactInfo d-flex flex-column">
+                                <span>Andrea</span>
+                                <span class="lastSeenOnline">Ultimo messaggio inviato</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
         <!-- Lato APP Destro -->
         <div class="col-8">
             <div class="row">
                 <!-- Sezione utente attiva -->
-                <div class="col-12 lightgrey d-flex align-items-center justify-content-between">
+                <div class="col-12 d-flex align-items-center justify-content-between">
                     <div class="loggedUser d-flex align-items-center justify-content-center">
                         <!-- Avatar utente attivo -->
                         <img class="mx-2" src="./img/avatar_1.jpg" alt="avatar_1">
