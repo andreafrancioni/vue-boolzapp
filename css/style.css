@@ -4,3 +4,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background: linear-gradient(180deg, rgba(0,150,136,1) 21%, rgba(220,219,210,1) 21%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+img{
+    height: 3em;
+    border-radius: 50%;
+    margin: 0.5em 0;
+}
+
+.lastSeenOnline{
+    font-size: 0.8em;
+}
+
+/* Colors */
+.lightgrey{background-color: #EAEAEA;}

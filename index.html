@@ -14,8 +14,58 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="app">
-       
+    <div id="app" class="container mt-4">
+       <div class="row">
+           <!-- Lato APP Sinistro -->
+        <div class="col-4">
+            <div class="row">
+                <!-- Sezione Utente Loggato -->
+                <div class="col-12 lightgrey d-flex align-items-center justify-content-between">
+                    <div class="loggedUser d-flex align-items-center justify-content-center">
+                        <!-- Avatar utente loggato -->
+                        <img class="mx-2" src="./img/avatar_1.jpg" alt="avatar_1">
+                        <!-- Nome utente loggato-->
+                        <span>Andrea</span>
+                    </div>
+                    <!-- Icone funzionali di utente loggato -->
+                    <div class="settingButtons d-flex align-items-center justify-content-between">
+                        <i class="fas fa-circle-notch fa-lg mx-2"></i>
+                        <i class="fas fa-message fa-lg mx-2"></i>
+                        <i class="fas fa-ellipsis-vertical fa-lg mx-2"></i>
+                    </div>
+                </div>
+                <!-- Lista contatti -->
+                <div class="col-12">Prova</div>
+            </div>
+        </div>
+        <!-- Lato APP Destro -->
+        <div class="col-8">
+            <div class="row">
+                <!-- Sezione utente attiva -->
+                <div class="col-12 lightgrey d-flex align-items-center justify-content-between">
+                    <div class="loggedUser d-flex align-items-center justify-content-center">
+                        <!-- Avatar utente attivo -->
+                        <img class="mx-2" src="./img/avatar_1.jpg" alt="avatar_1">
+                        <!-- Nome utente chat attiva e ultimo accesso-->
+                        <div class="activeUserInfo d-flex flex-column">
+                            <span>Andrea</span>
+                            <span class="lastSeenOnline">Ultimo accesso oggi alle 12:00</span>
+                        </div>
+                    </div>
+                    <!-- Icone funzionali di utente loggato -->
+                    <div class="settingButtons d-flex align-items-center justify-content-between">
+                        <i class="fas fa-magnifying-glass fa-lg mx-2"></i>
+                        <i class="fas fa-paperclip fa-lg mx-2"></i>
+                        <i class="fas fa-ellipsis-vertical fa-lg mx-2"></i>
+                    </div>
+                </div>
+                <!-- Sezione chat attiva -->
+                <div class="col-12">
+                    Prova
+                </div>
+            </div>
+        </div>
+       </div>
     </div>
     
     <!-- JS -->
