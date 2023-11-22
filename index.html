@@ -102,8 +102,8 @@
 
                         <!-- Modificato elemento p con link per funzionalità dropdown milestone 5 -->
                         <!-- <p v-for="message in contacts[activeContact].messages" class="message" :class="message.status === 'sent' ? 'sentMessage' : 'replyMessage'">{{message.message}}</p> -->
-                        <div class="dropdown dropend">
-                            <a v-for="(message,i) in contacts[activeContact].messages" class="message" :class="message.status === 'sent' ? 'sentMessage' : 'replyMessage'"
+                        <div v-for="(message,i) in contacts[activeContact].messages" class="dropdown dropend">
+                            <a class="message" :class="message.status === 'sent' ? 'sentMessage' : 'replyMessage'"
                             class="btn btn-secondary dropdown-toggle" href="#" @click="showMessageId(i)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>{{message.message}}</span>
                             </a>
@@ -112,7 +112,7 @@
                               <li><a class="dropdown-item" href="#">Message info</a></li>
                               <li><a class="dropdown-item" href="#" @click="deleteMessage(i)">Delete message</a></li>
                             </ul>
-                          </div>
+                        </div>
                     </div>
                     <!-- Input per nuovo messaggio -->
                     <div class="typeMessage d-flex align-items-center justify-content-between">
