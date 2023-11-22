@@ -29,13 +29,8 @@ img{
 
 .lastSeenOnline{
     font-size: 0.8em;
+    opacity: 50%;
 }
-
-.activeChat{
-
-    background-image: url(../img/mine.jpg);
-}
-
 
 .typeMessage input{
     width: 100%;
@@ -44,9 +39,11 @@ img{
 }
 
 .activeChat{
+    background-image: url(../img/mine.jpg);
     padding: 4rem;
 }
 
+/* Css Message */
 .message{
     width: 40%;
     padding: 0.5em;
@@ -62,6 +59,7 @@ img{
     background-color: #FFFFFF;
     align-self: flex-start;
 }
+/* ------------------------- */
 
 /* Colors */
 .lightgrey{background-color: #EAEAEA;}

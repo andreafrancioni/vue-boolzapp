@@ -49,22 +49,24 @@
                 <!-- Sezione chat -->
                 <div class="col-12 p-0 lightgrey">
                     <!-- Barra di ricerca della chat -->
-                    <div class="findChat d-flex my-3">
-                        <span class="input-group-text" id="inputGroup-sizing-small"><i class="fas fa-magnifying-glass"></i></span>
-                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <div class="d-flex my-3">
+                        <span class="input-group-text" id="inputGroup-sizing-small" @click="filterChat()"><i class="fas fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" v-model="findChat" @input="filterChat(i)">
                       </div>
 
                     <!-- Lista contatti -->
                     <div class="contactList bg-white">
                         <!-- Per ogni contatto nell'array contatti, recupera nome avatar ed indice e modifica i parametri in pagina -->
                         <div v-for="(contact,i) in contacts" class="userContact d-flex align-items-center" @click="setActive(i)">
-                            <div class="contactAvatar">
-                                <img class="mx-2" :src="contact.avatar" alt="">
-                            </div>
-                            <div class="contactInfo d-flex flex-column">
-                                <span>{{contact.name}}</span>
-                                <span class="lastSeenOnline">Ultimo messaggio inviato</span>
-                            </div>
+                            <template v-if="contact.visible === true">
+                                <div class="contactAvatar">
+                                    <img class="mx-2" :src="contact.avatar" alt="">
+                                </div>
+                                <div class="contactInfo d-flex flex-column">
+                                    <span>{{contact.name}}</span>
+                                    <span class="lastSeenOnline">Ultimo messaggio inviato</span>
+                                </div>
+                            </template>
                         </div>
                     </div>
 

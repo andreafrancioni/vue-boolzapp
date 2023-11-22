@@ -170,6 +170,7 @@ const opzioni = {
             
             activeContact:0,
             newMessage: "",
+            findChat: "",
         }
     },
     methods:{
@@ -198,6 +199,31 @@ const opzioni = {
                 status: 'recived'
             }
             this.contacts[this.activeContact].messages.push(newChatMessage);
+        },
+
+        filterChat(){
+
+
+            const maxContact = this.contacts.length;
+
+            console.log(maxContact);
+
+            for (let i = 0; i < maxContact; i++) {
+
+                nomeUtente = this.contacts[i].name
+
+                if (nomeUtente.includes(this.findChat)) {
+                    // Se troviamo una corrispondenza, possiamo restituire true
+                    this.contacts[i].visible = true;
+                  }else{
+                    this.contacts[i].visible = false;
+
+                  }
+
+                /*if(this.contacts[i].name != this.findChat){
+                }*/
+                
+            }
         }
     },
 };
