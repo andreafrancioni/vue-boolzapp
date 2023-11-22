@@ -17,10 +17,10 @@
     <div id="app" class="container mt-4">
        <div class="row lightgrey">
            <!-- Lato APP Sinistro -->
-        <div class="col-4">
+        <div class="col-4 p-0">
             <div class="row">
                 <!-- Sezione Utente Loggato -->
-                <div id="loggedUser" class="col-12 d-flex align-items-center justify-content-between">
+                <div id="loggedUser" class="col-12 d-flex align-items-center justify-content-between lightgrey">
                     <div class="loggedUser d-flex align-items-center justify-content-center">
                         <!-- Avatar utente loggato -->
                         <img class="mx-2" src="./img/avatar_1.jpg" alt="avatar_1">
@@ -28,14 +28,14 @@
                         <span>Andrea</span>
                     </div>
                     <!-- Icone funzionali di utente loggato -->
-                    <div class="settingButtons d-flex align-items-center justify-content-between">
+                    <div class="settingButtons d-flex align-items-center justify-content-between lightgrey">
                         <i class="fas fa-circle-notch fa-lg mx-2"></i>
                         <i class="fas fa-message fa-lg mx-2"></i>
                         <i class="fas fa-ellipsis-vertical fa-lg mx-2"></i>
                     </div>
                 </div>
                 <!-- Banner Notifiche -->
-                <div class="col-12 lightblue">
+                <div class="col-12 p-0 lightblue">
                     <div class="d-flex align-items-center">
                         <div class="notificationImage d-flex align-items-center justify-content-center mx-2">
                             <i class="fas fa-bell-slash fa-lg"></i>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <!-- Sezione chat -->
-                <div class="col-12">
+                <div class="col-12 p-0 lightgrey">
                     <!-- Barra di ricerca della chat -->
                     <div class="findChat d-flex my-3">
                         <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-magnifying-glass"></i></span>
@@ -72,10 +72,10 @@
             </div>
         </div>
         <!-- Lato APP Destro -->
-        <div class="col-8">
-            <div class="row">
+        <div class="col-8 p-0 lightgrey">
+            <div class="row m-0">
                 <!-- Sezione utente attiva -->
-                <div class="col-12 d-flex align-items-center justify-content-between">
+                <div class="col-12 p-0 d-flex align-items-center justify-content-between lightgrey">
                     <div class="loggedUser d-flex align-items-center justify-content-center">
                         <!-- Avatar utente attivo -->
                         <img class="mx-2" :src="contacts[activeContact].avatar" alt="avatar_1">
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <!-- Sezione chat attiva -->
-                <div class="col-12 lightgrey">
+                <div class="col-12 p-0 lightgrey">
                     <!-- Messaggi della chat attiva -->
                     <div class="activeChat d-flex flex-column">
                         <!-- Per ogni messaggio nell'array messages crea l'elemento testo -->
