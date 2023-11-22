@@ -103,7 +103,7 @@
                     <!-- Input per nuovo messaggio -->
                     <div class="typeMessage d-flex align-items-center justify-content-between">
                         <i class="fa-regular fa-face-smile fa-lg m-4"></i>
-                        <input id="userMessage" type="text" placeholder="Scrivi un messaggio">
+                        <input id="userMessage" type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage()">
                         <i class="fas fa-microphone fa-lg m-4"></i>
                     </div>
                 </div>
