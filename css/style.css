@@ -41,6 +41,18 @@ img{
 .activeChat{
     background-image: url(../img/mine.jpg);
     padding: 4rem;
+    min-height: 600px;
+}
+
+.activeChat a{
+    color: black;
+    display: flex;
+    text-decoration:none;
+    margin-bottom: 0.5em;
+}
+
+.dropdown{
+    display: contents;
 }
 
 /* Css Message */

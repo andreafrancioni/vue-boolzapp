@@ -171,6 +171,7 @@ const opzioni = {
             activeContact:0,
             newMessage: "",
             findChat: "",
+            activeMessageId: "",
         }
     },
     methods:{
@@ -224,7 +225,20 @@ const opzioni = {
                 }*/
                 
             }
+        },
+
+        deleteMessage(i){
+
+            this.contacts[this.activeContact].messages.splice(this.activeMessageId, 1);
+
+        },
+
+        showMessageId(messageId){
+
+            console.log(messageId);
+            this.activeMessageId = messageId;
         }
+
     },
 };
 
