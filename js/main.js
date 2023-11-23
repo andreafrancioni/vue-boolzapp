@@ -211,7 +211,9 @@ const opzioni = {
 
             for (let i = 0; i < maxContact; i++) {
 
-                nomeUtente = this.contacts[i].name
+                nomeUtente = this.contacts[i].name.toLowerCase();
+
+                console.log(nomeUtente);
 
                 if (nomeUtente.includes(this.findChat)) {
                     // Se troviamo una corrispondenza, possiamo restituire true

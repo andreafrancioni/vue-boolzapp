@@ -51,7 +51,7 @@
                     <!-- Barra di ricerca della chat -->
                     <div class="d-flex my-3">
                         <span class="input-group-text" id="inputGroup-sizing-small" @click="filterChat()"><i class="fas fa-magnifying-glass"></i></span>
-                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" v-model="findChat" @input="filterChat(i)">
+                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" v-model="findChat" @keyup="filterChat(i)">
                       </div>
 
                     <!-- Lista contatti -->
