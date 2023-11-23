@@ -243,7 +243,13 @@ const vue = createApp({
 
         lastSentMessage(i){
 
-        
+            const lastMessageId = this.contacts[i].messages.length-1
+            
+            console.log(lastMessageId);
+
+            const lastMessageChat = this.contacts[i].messages[lastMessageId].message;
+
+            return lastMessageChat;
         },
 
     },
