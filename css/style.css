@@ -41,7 +41,14 @@ img{
 .activeChat{
     background-image: url(../img/mine.jpg);
     padding: 4rem;
-    min-height: 600px;
+    height: 100vh;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.contactList{
+    max-height: 600px;
+    overflow-y: scroll;
 }
 
 .activeChat a{
@@ -49,6 +56,8 @@ img{
     display: flex;
     text-decoration:none;
     margin-bottom: 0.5em;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .dropdown{
@@ -70,6 +79,12 @@ img{
 .replyMessage{
     background-color: #FFFFFF;
     align-self: flex-start;
+}
+
+.dateMessage{
+    font-size: 0.5em;
+    opacity: 50%;
+    align-self: flex-end;
 }
 /* ------------------------- */
 
