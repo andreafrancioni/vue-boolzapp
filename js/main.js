@@ -1,7 +1,7 @@
 /* Vue App Start */
 const { createApp } = Vue;
 
-const opzioni = {
+const vue = createApp({
     data: function () {
         return {
             contacts: [
@@ -239,9 +239,12 @@ const opzioni = {
 
             console.log(messageId);
             this.activeMessageId = messageId;
-        }
+        },
+
+        lastSentMessage(i){
+
+        
+        },
 
     },
-};
-
-createApp(opzioni).mount('#app')
+}).mount('#app')
