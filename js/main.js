@@ -172,6 +172,7 @@ const vue = createApp({
             newMessage: "",
             findChat: "",
             activeMessageId: "",
+            thisChat: "",
         }
     },
     methods:{
@@ -181,6 +182,8 @@ const vue = createApp({
         },
 
         sendMessage(){
+
+            this.thisChat = this.activeContact;
             
             const newChatMessage = {
                 date: '10/01/2020 15:30:55',
@@ -199,7 +202,7 @@ const vue = createApp({
                 message: "Ok",
                 status: 'recived'
             }
-            this.contacts[this.activeContact].messages.push(newChatMessage);
+            this.contacts[this.thisChat].messages.push(newChatMessage);
         },
 
         filterChat(){
